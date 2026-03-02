@@ -20,7 +20,7 @@ Dieses Projekt ist eine statische Nachbildung der Instagram-Explore-Seite (Suchs
 ├── index.html
 ├── style.css
 ├── README.md
-└── img/
+└── image/
     ├── featured.gif
     ├── post1.gif
     ├── post2.jpg
