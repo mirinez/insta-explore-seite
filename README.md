@@ -20,6 +20,10 @@ Dieses Projekt ist eine statische Nachbildung der Instagram-Explore-Seite (Suchs
 ├── index.html
 ├── style.css
 ├── README.md
+└── fonts/
+    ├── Nunito-Regular.ttf
+    ├── Nunito-SemiBold.ttf
+    └── Nunito-Bold.ttf
 └── image/
     ├── featured.gif
     ├── post1.gif
