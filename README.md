@@ -22,6 +22,7 @@ Dieses Projekt ist eine statische Nachbildung der Instagram-Explore-Seite (Suchs
 ├── README.md
 └── fonts/
     ├── Nunito-Regular.ttf
+    ├── Nunito-Italic.ttf
     ├── Nunito-SemiBold.ttf
     └── Nunito-Bold.ttf
 └── image/
