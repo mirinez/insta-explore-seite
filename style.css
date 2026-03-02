@@ -1,8 +1,28 @@
 /* style.css — Instagram Explore Page Styles
-
 Míriam Domínguez Martínez - 01.03.26
-
 */
+
+/* ================================================================
+   FONTS
+*/
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('./fonts/Nunito/Nunito-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('./fonts/Nunito/Nunito-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('./fonts/Nunito/Nunito-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
 
 /* ================================================================
    1. CSS BASE STYLES
