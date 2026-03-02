@@ -1,2 +1,43 @@
-# insta-explore-seite
+## Instagram Explore – Hausaufgabe
+
+**Autorin:** Míriam Domínguez Martínez  
+**Datum:** 01.03.2026  
+**Kurs:** Full Stack Web Development – DBA Akademie  
+**Thema:** HTML & CSS – Nachbau der Instagram-Suchseite
+
+---
+
+### Projektbeschreibung
+
 Dieses Projekt ist eine statische Nachbildung der Instagram-Explore-Seite (Suchseite), erstellt ausschließlich mit **HTML** und **CSS**. Ziel der Aufgabe war es, die wichtigsten Grundkonzepte beider Sprachen praktisch anzuwenden: Seitenstruktur, Layouts mit Flexbox und CSS Grid, Hover-Effekte und die Trennung von Inhalt (HTML) und Design (CSS).
+
+---
+
+### Dateistruktur
+
+```
+/
+├── index.html
+├── style.css
+├── README.md
+└── img/
+    ├── featured.gif
+    ├── post1.gif
+    ├── post2.jpg
+    ├── post3.jpg
+    ├── post4.jpg
+    └── post5.jpg
+```
+
+---
+
+### Warum Kommentare auf Englisch?
+
+Deutsch ist auch nicht meine Zweitsprache, ich lerne alles auf Deutsch und meine Notizen sind auf Deutsch, 
+aber wenn ich HTML oder CSS schreibe, habe ich gemerkt, dass ich mich besser auf Englisch organisiere und bin viel effizienter.
+Auf diese Weise erkenne ich schneller, was ich mache und wofür jedes Element dient, da diese Sprachen auch auf Englisch basieren.
+
+---
+
+*Full Stack Web Development Kurses – DBA Akademie, 2026.*
+
