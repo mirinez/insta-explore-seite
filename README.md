@@ -1,4 +1,4 @@
-## Instagram Explore Seite 🔍
+## Instagram Explore Seite
 
 **Autorin:** Míriam Domínguez Martínez  
 **Datum:** 01.03.2026  
