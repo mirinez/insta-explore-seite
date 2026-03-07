@@ -1,7 +1,7 @@
 ## Instagram Explore Seite
 
 **Autorin:** Míriam Domínguez Martínez  
-**Datum:** 01.03.2026  
+**Datum:** 03.03.2026  
 **Kurs:** Full Stack Web Development – DBA Akademie  
 **Thema:** HTML & CSS – Nachbau der Instagram-Suchseite
 
