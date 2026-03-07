@@ -1,9 +1,9 @@
 /* style.css — Instagram Explore Page Styles
-Míriam Domínguez Martínez - 01.03.26
+   Míriam Domínguez Martínez - 03.03.26
 */
 
 /* ================================================================
-   FONTS
+   1. FONTS LOCALLY
 */
 
 @font-face {
@@ -25,227 +25,303 @@ Míriam Domínguez Martínez - 01.03.26
 }
 
 /* ================================================================
-   1. CSS BASE STYLES
+   2. GLOBAL BASE STYLES
 */
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
 }
 
 body {
   font-family: 'Nunito', sans-serif;
   background-color: #fafafa;
-  color: #262626;            /* almost-black text */
-  min-height: 100px;           /* page is at least as tall as the screen */
+  color: #262626;
+  min-height: 100vh; /* Ensures body takes full viewport height */
 }
 
-
 /* ================================================================
-   2. HEADER (logo + search bar)
+   3. HEADER NAVIGATION BAR
 */
 
 .site-header {
-  position: sticky;            /* sticks to the top when you scroll */
-  top: 0;
-  z-index: 100;                /* appears above all other content */
-
+  position: sticky; /* Sticks to top of viewport when scrolling */
+  top: 0; 
+  z-index: 100; /* Ensures header stays above other content */
   background-color: #ffffff;
-  border-bottom: 1px solid #dbdbdb; /* grey divider line */
-
-  display: flex;
-  align-items: center;         /* center logo and search bar vertically */
-  justify-content: center;     /* center them horizontally in the header */
-  gap: 24px;
-
-  padding: 12px 24px;
+  border-bottom: 1px solid #dbdbdb;
+  display: flex; /* Flexbox for horizontal layout */
+  align-items: center;
+  justify-content: flex-start; /* Aligns items to the left */
+  gap: 24px; /* Space between logo, search bar, and buttons */
+  padding: 12px 24px; /* Vertical and horizontal padding */
 }
 
+/* Logo styling in header */
 .logo {
-  font-size: 22px;
+  font-size: 22px; 
   font-weight: 700;
   letter-spacing: -0.5px;
-  white-space: nowrap;         /* prevent logo text from wrapping */
+  white-space: nowrap; /* Prevents logo from breaking into multiple lines */
+  flex-shrink: 0; /* Prevents logo from shrinking when space is limited */
 }
 
-
 /* ================================================================
-   3. SEARCH INPUT 
+   4. SEARCH BAR SECTION
 */
 
 .search-bar {
-  width: 100%;
-  max-width: 280px;
+  flex: 1; /* Allows search bar to grow and fill available space */
+  max-width: 280px; /* Limits search bar width */
 }
 
 .search-input {
   width: 100%;
-  padding: 9px 16px;
+  padding: 9px 16px; 
   background-color: #efefef;
   border: none;
-  border-radius: 8px;
+  border-radius: 8px; /* Rounded corners */
   font-size: 14px;
-  font-family: inherit;       /* same font as the rest of the page */
+  font-family: inherit; 
   color: #262626;
-  outline: none;              /* removes default browser focus ring */
-  transition: background-color 0.15s ease;
+  outline: none; /* Remove default focus outline */
+  transition: background-color 0.15s ease; /* Smooth background color transition on focus */
 }
 
+/* Placeholder text styling */
 .search-input::placeholder {
-  color: #8e8e8e;            /* grey placeholder text */
+  color: #8e8e8e;
 }
 
+/* Change background color on focus for better visibility */
 .search-input:focus {
-  background-color: #e2e2e2; /* slightly darker when active */
+  background-color: #e2e2e2;
 }
-
 
 /* ================================================================
-   4. MAIN CONTENT WRAPPER
+   5. HEADER ACTION BUTTONS
+*/
+
+.header-actions {
+  display: flex; /* Flexbox for horizontal layout of buttons */
+  gap: 12px; /* Space between buttons */
+  margin-left: auto;
+  flex-shrink: 0; /* Prevents buttons from shrinking when space is limited */
+}
+
+/* ================================================================
+   6. BUTTON STYLES
+*/
+
+.btn {
+  padding: 8px 20px; 
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.2s ease; /* Smooth transition for hover effects */
+  font-family: inherit; 
+}
+
+.btn-primary {
+  background-color: #0095f6;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #0081cc;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #0095f6;
+  border: 1px solid #0095f6;
+}
+
+.btn-secondary:hover {
+  background-color: #f0f9ff;
+}
+
+/* ================================================================
+   7. PAGE TITLE SECTION
+*/
+
+.page-title-section {
+  text-align: left; /* Aligns title to the left */
+  margin: 32px 0 24px 0; /* Top margin for spacing from header, bottom margin for spacing from filters */
+}
+
+.page-title {
+  font-size: 28px; /* Larger font size for main title */
+  font-weight: 700; 
+  color: #262626;
+}
+
+/* ================================================================
+   8. FILTER SECTION
+*/
+
+.filter-section {
+  display: flex; /* Flexbox for horizontal layout of filter buttons */
+  gap: 12px; /* Space between filter buttons */
+  margin-bottom: 32px; /* Spacing between filters and main content */
+  justify-content: flex-start; /* Aligns filter buttons to the left */
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 20px; /* Pill-shaped buttons */
+  font-size: 14px; /* Smaller font size for filter buttons */
+  font-weight: 600;
+  color: #262626;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.2s ease; /* Smooth transition for hover and active states */
+  font-family: inherit;
+}
+
+.filter-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.filter-btn.active {
+  background-color: #262626;
+  color: #ffffff;
+}
+
+/* ================================================================
+   9. MAIN CONTENT WRAPPER
 */
 
 .main-content {
   max-width: 935px;
-  margin: 0 auto;              /* auto left+right margin = centered on the page */
-  padding: 24px 0;
+  margin: 0 auto; /* Centers main content horizontally */
+  padding: 24px; /* Adds whitespace around edges */
 }
 
-
 /* ================================================================
-   5. GRID SECTION
+   10. GRID SECTION
 */
 
 .grid-section {
-  margin-bottom: 48px;        /* space between sections */
-
-  display: flex;
-  flex-direction: column;     /* stack title and grid vertically */
-  align-items: center;
+  margin-bottom: 48px; /* Spacing between sections */
+  display: flex; /* Flexbox for vertical layout of section header and carousel */
+  flex-direction: column; /* Stacks header and carousel vertically */
+  align-items: flex-start; /* Aligns section header to the left */
 }
 
-
 /* ================================================================
-   6. GRID INNER WRAPPER
+   11. GRID INNER WRAPPER
 */
 
 .grid-inner {
-  /* Total grid width = 3 columns × 180px + 2 gaps × 3px */
-  width: calc(3 * 180px + 2 * 3px);
+  width: 100%; /* Ensures carousel takes full width of section */
 }
 
-/* The section title sits inside .grid-inner so it naturally
-   starts at the same left edge as the first photo */
+/* ================================================================
+   12. SECTION HEADER
+*/
+
+.section-header {
+  display: flex; /* Flexbox for horizontal layout of title and arrow */
+  align-items: center; /* Vertically centers title and arrow */
+  justify-content: space-between; /* Pushes title to left and arrow to right */
+  margin-bottom: 12px; /* Spacing between header and carousel */
+  gap: 12px; /* Space between title and arrow */
+}
+
 .section-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
-  margin-bottom: 12px;
   color: #262626;
 }
 
-/* ================================================================
-   7. PHOTO GRID
-*/
+.section-arrow {
+  font-size: 20px;
+  color: #262626;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
 
-.photo-grid {
-  display: grid;
-
-  /* 3 equal columns of 180px each.
-     Change 180px to make all cells bigger or smaller. */
-  grid-template-columns: repeat(3, 180px);
-
-  gap: 3px;            /* small gap between cells */
+.section-arrow:hover {
+  color: #0095f6;
 }
 
 /* ================================================================
-   8. GRID ITEM (individual post cell)
+   13. PHOTO GRID CAROUSELn
+*/
+
+.photo-grid {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  align-items: flex-start; /* Aligns items to the top of the carousel */
+}
+
+/* ================================================================
+   14. GRID ITEMS
 */
 
 .grid-item {
-  position: relative;
-  border-radius: 8px;          /* rounded */
-
-  /* Forces a perfect square regardless of screen width */
-  aspect-ratio: 1 / 1;
-
-  overflow: hidden;            /* crops image to the square shape */
-  cursor: pointer;
-  background-color: #dbdbdb; /* grey shown when no image */
+  position: relative; /* Allows for absolute positioning of labels */
+  border-radius: 8px; /* Rounded corners for images */
+  width: 160px;
+  height: 280px;
+  flex-shrink: 0;
+  overflow: hidden; /* Ensures images don't overflow their container */
+  cursor: pointer; /* Pointer cursor on hover */
+  background-color: #dbdbdb;
+  transition: transform 0.2s ease; /* Smooth scaling on hover */
 }
 
 .grid-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;           /* fills the square without stretching */
-  display: block;
-  transition: transform 0.3s ease;
+  object-fit: cover; /* Ensures image covers entire grid item without distortion */
+  display: block; /* Removes default inline spacing below images */
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
 }
 
-/* Subtle zoom on hover */
+.grid-item:hover {
+  transform: scale(1.02);
+}
+
 .grid-item:hover img {
   transform: scale(1.04);
 }
 
-
 /* ================================================================
-   9. FEATURED POST (large 2x2 cell)
+   15. GRID LABEL
 */
 
-.grid-item.featured {
-  grid-column: span 2;     /* spans 2 columns */
-  grid-row: span 2;        /* spans 2 rows */
-}
-
-
-/* ================================================================
-   10. HOVER OVERLAY
-*/
-
-.grid-overlay {
-  position: absolute;      /* positioned inside .grid-item */
-  top: 0;
+.grid-label {
+  position: absolute; /* Allows label to be positioned over the image */
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-
-  background-color: rgba(0, 0, 0, 0.35); /* semi-transparent black */
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-
-  opacity: 0;                    /* hidden by default */
-  transition: opacity 0.2s ease; /* smooth fade in */
-}
-
-.grid-item:hover .grid-overlay {
-  opacity: 1;                    /* show on hover */
-}
-
-.overlay-stat {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.7)); /* Gradient for better text visibility */
   color: #ffffff;
-  font-weight: 700;
-  font-size: 15px;
-}
-
-.overlay-icon {
-  font-size: 18px;
+  padding: 16px 12px; /* Padding for label text */
+  font-size: 14px; /* Smaller font size for labels */
+  font-weight: 600;
+  text-align: left;
 }
 
 /* ================================================================
-   FOOTER
+   16. FOOTER
 */
 
 .site-footer {
-  text-align: center;
+  text-align: center; /* Centers footer text */
+  background-color: #ffffff;
   padding: 24px;
-  border-top: 1px solid #dbdbdb;
-  font-size: 13px;
+  border-top: 1px solid #dbdbdb; /* Adds a top border to separate footer from main content */
+  font-size: 13px; 
   color: #8e8e8e;
-
-  margin-top: 150px;            /* pushes footer to the very bottom */
+  margin-top: 150px; /* Adds spacing between main content and footer */
 }
