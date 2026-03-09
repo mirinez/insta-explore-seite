@@ -43,13 +43,6 @@ Dieses Projekt ist eine statische Nachbildung der Instagram-Explore-Seite (Suchs
 
 ---
 
-### Warum Kommentare auf Englisch?
-
-Deutsch ist auch nicht meine erste Sprache, ich lerne alles auf Deutsch und meine Notizen sind auf Deutsch, 
-aber wenn ich HTML oder CSS schreibe, habe ich gemerkt, dass ich mich besser auf Englisch organisiere und bin viel effizienter.
-Auf diese Weise erkenne ich schneller, was ich mache und wofür jedes Element dient, da diese Sprachen auch auf Englisch basieren.
-
----
 
 *Full Stack Web Development Kurses – DBA Akademie, 2026.*
 
